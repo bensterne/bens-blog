@@ -5,9 +5,9 @@
 
 :root,
 html[data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
+  --background: #F9F9FB;
+  --foreground: #1c2024;
+  --accent: #010169;
   --muted: #e6e6e6;
   --border: #ece9e9;
 }
@@ -21,7 +21,8 @@ html[data-theme="dark"] {
 }
 
 @theme inline {
-  --font-app: var(--font-google-sans-code);
+  --font-app: var(--font-instrument-sans);
+  --font-brand: var(--font-manrope);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
@@ -40,6 +41,10 @@ html[data-theme="dark"] {
   }
   body {
     @apply flex min-h-svh flex-col bg-background font-app text-foreground selection:bg-accent/75 selection:text-background;
+    font-weight: 400;
+  }
+  h1, h2, h3, h4, h5, h6, b, strong, th {
+    font-weight: 500;
   }
   a,
   button {
@@ -52,16 +57,13 @@ html[data-theme="dark"] {
 }
 
 @utility max-w-app {
-  @apply max-w-3xl;
+  max-width: 63rem;
 }
 
 @utility app-layout {
   @apply mx-auto w-full max-w-app px-4;
 }
 
-.active-nav {
-  @apply underline decoration-wavy decoration-2 underline-offset-8;
-}
 
 /* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
 /* Anything that has been anchored to should have extra scroll margin */

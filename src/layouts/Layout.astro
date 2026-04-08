@@ -57,14 +57,22 @@ const structuredData = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Load Font -->
+    <!-- Load Fonts -->
     <Font
-      cssVariable="--font-google-sans-code"
+      cssVariable="--font-instrument-sans"
       preload={[{ subset: "latin", weight: 400, style: "normal" }]}
+    />
+    <Font
+      cssVariable="--font-manrope"
+      preload={[{ subset: "latin", weight: 700, style: "normal" }]}
+    />
+    <Font
+      cssVariable="--font-funnel-display"
+      preload={[{ subset: "latin", weight: 600, style: "normal" }]}
     />
 
     <!-- General Meta Tags -->
